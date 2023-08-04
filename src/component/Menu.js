@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Menu(props){
     return(
-        <nav className="navbar navbar-expand-md navbar-dark bg-success">
+        <nav className="navbar navbar-expand-md  fixed-top navbar-dark bg-success">
             <div className="container">
                 <NavLink to={'/'} className="navbar-brand" >React-Music-App</NavLink>
 
@@ -16,9 +16,7 @@ function Menu(props){
                         <li className="nav-item">
                             <NavLink to={`/`} className="nav-link" >Home</NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink to={`/music`} className="nav-link" >Music</NavLink>
-                        </li>
+                       
                         <li className="nav-item">
                             <NavLink to={`/contact`} className="nav-link" >Contact</NavLink>
                         </li>
