@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import key from "../config/token";
 import "./styles/home.css"
 import Artist from "./Artist";
+import Search from "./screens/Search";
 
 
 const URL = 'https://api.spotify.com'
@@ -54,6 +55,9 @@ function Home(props){
             <div className="row">
                 <div className="col-md-12 text-center">
                     <h3 className="display-3 text-light">MUSICO</h3>
+
+                            <Search sArtist={searchArtist} />
+
                 </div>
             </div>
          </div>
@@ -67,7 +71,7 @@ function Home(props){
                 {
                     artist && artist.map((item,index) => {
                         return (
-                            <Artist key={index} {...item} />
+                            <Artist key={index} {...item}  />
                         )
                     })
                 }
